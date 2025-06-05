@@ -1,0 +1,5 @@
+{
+  "name": "Script Speaker",
+  "description": "An application to parse unstructured scripts into a structured format using AI and display them visually.",
+  "requestFramePermissions": []
+}

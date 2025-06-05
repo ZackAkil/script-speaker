@@ -1,0 +1,5 @@
+gunicorn>=20.0
+Flask>=2.0
+
+google-cloud-texttospeech==2.27.0
+google-cloud-aiplatform==1.96.0
