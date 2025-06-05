@@ -35,33 +35,6 @@ _gemini_parser_model = GenerativeModel(GEMINI_MODEL_FOR_PARSING)
 _vertex_ai_initialized = True
 
 
-# try:
-#     # These environment variables are typically available in Cloud Run.
-#     # For local development, ensure they are set or ADC is configured.
-#     # project_id = os.environ.get("GOOGLE_CLOUD_PROJECT")
-#     # vertex_location = os.environ.get("VERTEX_AI_LOCATION", "us-central1") # Default if not set
-
-#     # Initialize Vertex AI. Project ID might be inferred if running on GCP and not explicitly set.
-#     if project_id:
-#         vertexai.init()
-#         print(f"Vertex AI initialized. Project: {project_id}, Location: {vertex_location}")
-#     else:
-#         # If project_id is None, SDK will try to infer from the environment.
-#         # Location is often a required parameter for vertexai.init().
-#         vertexai.init(location=vertex_location) 
-#         print(f"Vertex AI initialized with auto-detected project. Location: {vertex_location}")
-
-#     _gemini_parser_model = GenerativeModel(GEMINI_MODEL_FOR_PARSING)
-#     print(f"Gemini model '{GEMINI_MODEL_FOR_PARSING}' for parsing initialized.")
-#     _vertex_ai_initialized = True
-# except Exception as e:
-#     # Using app.logger here might not work if app context is not available yet.
-#     # Fallback to print for critical startup errors.
-#     print(f"CRITICAL: Error initializing Vertex AI or Gemini Model ({GEMINI_MODEL_FOR_PARSING}): {e}")
-#     _gemini_parser_model = None
-#     _vertex_ai_initialized = False
-
-
 @app.route('/')
 def index():
     """Serves the frontend HTML."""
